@@ -26,6 +26,13 @@ function getTime() {
         card.style.display = 'block'
         return time
     }
+    else if(hours === 0){
+        hours = hours === 0 ? `12` : hours
+        time = `${hours}:${minutes}:${sec} AM`
+        timer.innerHTML = time;
+        card.style.display = 'block'
+        return time
+    }
     else {
         time = `${time} AM`
         timer.innerHTML = time;
