@@ -19,7 +19,6 @@ function getTime() {
 
     }
     else if (hours > 12) {
-        console.warn('Greater than', hours)
         hours = hours % 12
         hours = hours < 10 ? `0${hours}` : hours
         time = `${hours}:${minutes}:${sec} PM`
