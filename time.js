@@ -1,6 +1,6 @@
 const timer = document.getElementById('timer');
-const div = document.querySelector('.time');
-div.style.display = 'none'
+const card = document.querySelector('.time');
+card.style.display = 'none'
 function getTime() {
     let myDate = new Date();
     let hours = myDate.getHours();
@@ -13,7 +13,7 @@ function getTime() {
     if (hours === 12) {
         time = `${time} PM`
         timer.innerHTML = time;
-        div.style.display = 'block'
+        card.style.display = 'block'
         // setTimeout(time, 500);
         return time
 
@@ -23,13 +23,13 @@ function getTime() {
         hours = hours % 12
         time = `${hours}:${minutes}:${sec} PM`
         timer.innerHTML = time;
-        div.style.display = 'block'
+        card.style.display = 'block'
         return time
     }
     else {
         time = `${time} AM`
         timer.innerHTML = time;
-        div.style.display = 'block'
+        card.style.display = 'block'
         return time
     }
 }
